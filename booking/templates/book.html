@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book a Slot</title>
+</head>
+<body>
+    <h1>Book a Slot</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Book</button>
+    </form>
+    <a href="{% url 'centers' %}">Back to Centers</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vaccination Centers</title>
+</head>
+<body>
+    <h1>Vaccination Centers</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Available Slots</th>
+        </tr>
+        {% for center in centers %}
+        <tr>
+            <td>{{ center.id }}</td>
+            <td>{{ center.name }}</td>
+            <td>{{ center.address }}</td>
+            <td>{{ center.available_slots }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'book' %}">Book a Slot</a>
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>
